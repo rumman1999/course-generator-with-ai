@@ -41,10 +41,6 @@ const CreateCourse = () => {
 
   const { userCourseInput, setUserCourseInput } = useContext(UserInputContext);
 
-  useEffect(() => {
-    // console.log(userCourseInput);
-  }, [userCourseInput]);
-
   //   check for next btn to ne disabled
   const checkStatus = () => {
     if (userCourseInput?.length === 0) return true;
@@ -106,7 +102,7 @@ const CreateCourse = () => {
         userProfileImage: user?.imageUrl,
       });
       console.log("finished saving");
-      router.replace("/create-course/" + id); // Ensure this is within a try/catch block
+      router.replace("/create-course/" + id); 
     } catch (error) {
       console.error("Error saving course layout:", error);
     } finally {

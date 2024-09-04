@@ -46,7 +46,7 @@ const SideBar = () => {
       <hr className="my-5" />
       <ul>
         {Menu.map((item, index) => (
-          <Link href={item.path}>
+          <Link href={item.path} key={index}>
             <div
               key={index}
               className={`flex items-center gap-2 text-gray-600 mb-2 cursor-pointer hover:bg-gray-100 hover:text-black rounded-lg p-3 ${

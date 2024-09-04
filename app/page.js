@@ -4,7 +4,7 @@ import Hero from "./_components/Hero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-100 overflow-hidden">
       <Header/>
       <Hero/>
     </div>
