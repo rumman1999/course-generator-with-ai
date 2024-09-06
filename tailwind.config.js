@@ -58,8 +58,22 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		}, height: {
+			'100vh-or-auto': '100vh', // Custom utility for 100vh
+		  },
+		  minHeight: {
+			'auto': 'auto', // Ensure auto is available
+		  },
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),
+	function ({ addUtilities }) {
+		addUtilities({
+		  '.h-100vh-or-auto': {
+			height: '100vh',
+			minHeight: 'auto',
+		  },
+		}, ['responsive', 'hover']);
+	  },
+  ],
 };

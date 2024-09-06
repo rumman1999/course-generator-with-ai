@@ -14,16 +14,16 @@ const TopicDesc = () => {
     }
 
   return (
-    <div>
+    <div className=' w-[600px] m-auto text-gray-300 text-2xl gap-5'>
         {/* input */}
-        <div className='mt-5'>
-            <label> Write the topic here </label>
-            <Input placeholder={"Topic"} defaultValue={userCourseInput.topic} onChange={(e => handleCategoryChange('topic' , e.target.value))}/>
+        <div className='mt-5 w-1/2'>
+            <label > Write the topic here </label>
+            <Input className="bg-slate-400 text-gray-900" placeholder={"Topic"} defaultValue={userCourseInput.topic} onChange={(e => handleCategoryChange('topic' , e.target.value))}/>
         </div>
         {/* text area */}
         <div className='mt-5'>
             <label>Tell us more about your code , what you wanna include </label>
-            <Textarea placeholder={"About your course"} defaultValue={userCourseInput.desc} onChange={(e =>handleCategoryChange('desc' , e.target.value))}/>
+            <Textarea className="bg-slate-400 text-gray-900 height-[300px]" placeholder={"About your course"} defaultValue={userCourseInput.desc} onChange={(e =>handleCategoryChange('desc' , e.target.value))}/>
         </div>
     </div>
   )

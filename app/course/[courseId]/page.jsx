@@ -27,7 +27,7 @@ const Course = ({params}) => {
 
       console.log(course)
   return (
-    <div className="p-10 border rounded-xl shadow-sm mt-5">
+    <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black  w-full h-auto px-7 md:px-20 lg:px-44 text-gray-300 min-h-[100vh] p-10 border rounded-xl shadow-sm mt-5">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div>
         <h2 className="font-bold text-2xl">{course?.courseOutput?.course?.name}</h2>

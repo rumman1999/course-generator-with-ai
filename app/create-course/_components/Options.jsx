@@ -21,28 +21,28 @@ const Options = () => {
     }
   return (
     <div className="px-10 md:px-20 lg:px44 mt-10">
-      <div className="grid grid-cols-2">
-       <div>
-        <label>Difficulty Level</label>
-       <Select onValueChange={(value)=>handleCategoryChange('difficultLevel' , value)} defaultValue={userCourseInput?.difficultLevel}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Theme" />
+      <div className="grid grid-cols-2 text-gray-300 text-xl">
+       <div className="mb-10">
+        <label >Difficulty Level</label>
+       <Select  onValueChange={(value)=>handleCategoryChange('difficultLevel' , value)} defaultValue={userCourseInput?.difficultLevel}>
+          <SelectTrigger className="w-[180px] bg-slate-400 text-gray-800">
+            <SelectValue placeholder="Level" />
           </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="Bigginer">Bigginer</SelectItem>
+          <SelectContent className="bg-slate-400">
+            <SelectItem value="Bigginer">Beginner</SelectItem>
             <SelectItem value="Intermediate">Intermediate</SelectItem>
             <SelectItem value="Advance">Advance</SelectItem>
           </SelectContent>
         </Select>
        </div>
-       <div>
+       <div className="mb-10">
         <label>Coarse Duration</label>
        <Select onValueChange={(value)=>handleCategoryChange('duration' , value)}
         defaultValue={userCourseInput?.duration}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Theme" />
+          <SelectTrigger className="w-[180px] bg-slate-400 text-gray-800">
+            <SelectValue placeholder="Time" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-slate-400">
             <SelectItem value="1 hours">1 hours</SelectItem>
             <SelectItem value="2 hours">2 hours</SelectItem>
             <SelectItem value="More than 2 hours">More than 2 hours</SelectItem>
@@ -52,10 +52,10 @@ const Options = () => {
        <div>
         <label>Ad Video</label>
        <Select onValueChange={(value)=>handleCategoryChange('add' , value)} defaultValue={userCourseInput?.add}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Theme" />
+          <SelectTrigger className="w-[180px] bg-slate-400 text-gray-800">
+            <SelectValue placeholder="Ad" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-slate-400">
             <SelectItem value="Yes">Yes</SelectItem>
             <SelectItem value="No">No</SelectItem>
           </SelectContent>
@@ -63,7 +63,7 @@ const Options = () => {
        </div>
        <div>
         <label>No of Chapter</label>
-        <Input type="number" onChange={(e)=>handleCategoryChange('noOfChapter' , e.target.value)} defaultValue={userCourseInput?.noOfChapter}/>
+        <Input className="w-[180px] bg-slate-400 text-gray-800" type="number" onChange={(e)=>handleCategoryChange('noOfChapter' , e.target.value)} defaultValue={userCourseInput?.noOfChapter}/>
        </div>
       </div>
       </div>

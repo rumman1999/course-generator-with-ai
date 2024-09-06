@@ -12,7 +12,7 @@ const CoursesCard = ({course}) => {
           {course?.courseOutput?.course?.name}
         </h2>
         <div className='flex items-center justify-between'>
-          <h2 className='flex gap-2 items-center p-1 bg-gray-50 text-gray-600 text-sm'>Total Chapters {course?.courseOutput?.course?.chapters.length}</h2>
+          <h2 className='flex gap-2 items-center p-1  text-gray-600 text-sm'>Total Chapters {course?.courseOutput?.course?.chapters.length}</h2>
           <h2  className='text-sm'>Level {course?.courseOutput?.course?.level}</h2>
         </div>
       </div>

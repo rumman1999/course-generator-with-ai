@@ -2,7 +2,7 @@ import { SignIn } from '@clerk/nextjs'
 
 export default function Page() {
   return (
-<section className="bg-white">
+<section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black">
     <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
       <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
         <img
@@ -27,11 +27,11 @@ export default function Page() {
             </svg>
           </a>
   
-          <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          <h2 className="mt-6 text-2xl font-bold text-gray-950 sm:text-3xl md:text-4xl">
             Welcome to AI Course Generator 🦑
           </h2>
   
-          <p className="mt-4 leading-relaxed text-white/90">
+          <p className="mt-4 leading-relaxed text-gray-100">
           Create custom courses effortlessly with AI-powered tools tailored to your needs.
           </p>
         </div>
@@ -64,12 +64,9 @@ export default function Page() {
               Welcome to Squid 🦑
             </h1>
   
-            <p className="mt-4 leading-relaxed text-gray-500">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-              quibusdam aperiam voluptatum.
-            </p>
+            
           </div>
-            <SignIn/>
+            <SignIn className='bg-gradient-to-b from-gray-900 via-gray-800 to-black  '/>
         </div>
       </main>
     </div>

@@ -7,7 +7,7 @@ import CoursessList from './_components/CoursessList'
 const Dashboard = () => {
   
   return (
-    <div>
+    <div className='p-20'>
         <AddCourse/>
         <CoursessList/>
     </div>

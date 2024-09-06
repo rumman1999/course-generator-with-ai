@@ -1,42 +1,12 @@
-import React from 'react'
+// "use client"
+// import React, { useEffect, useRef } from 'react';
 
-const Hero = () => {
-  return (
-    <section className="bg-gray-50 h-3/4" >
-  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-[calc(100vh-100px)] lg:items-center">
-    <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
-        Create Courses using AI
-        <strong className="font-extrabold text-red-700 sm:block"> Easy And Quick </strong>
-      </h1>
+// const Hero = () => {
 
-      <p className="mt-4 sm:text-xl/relaxed">
-      Create custom courses effortlessly with AI-powered tools tailored to your needs.
-      </p>
 
-      <p className="mt-4 sm:text-xl/relaxed">
-      The Website workis still in progress ......
-      </p>
+//   return (
+   
+//   );
+// };
 
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        {/* <a
-          className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="/dashboard"
-        >
-          Get Started
-        </a>
-
-        <a
-          className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="#"
-        >
-          Learn More
-        </a> */}
-      </div>
-    </div>
-  </div>
-</section>
-  )
-}
-
-export default Hero
+// export default Hero;

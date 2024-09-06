@@ -4,13 +4,13 @@ import Header from './_components/Header'
 
 const DashboardLayout = ({children}) => {
   return (
-    <div>
-      <div className='md:w-64 hidden md:block'>
+    <div className='bg-gradient-to-b from-gray-900 via-gray-800 to-black h-[100vh] w-full'>
+      <div className='md:w-64 hidden md:block '>
         <SideBar/>
       </div>
-        <div className='md:ml-64'>
+        <div className='md:ml-64 '>
             <Header/>
-        <div className='p-10'>
+        <div >
         {children}
         </div>
         </div>
