@@ -11,7 +11,7 @@ const CoursessList = () => {
   const { user } = useUser();
   const [courseList, setCourseList] = useState([]);
   const [gotoSlide, setGotoSlide] = useState(0);
-  const [offsetRadius, setOffsetRadius] = useState(2); // Add default value if needed
+  const [offsetRadius, setOffsetRadius] = useState(0); // Add default value if needed
   const [intervalId, setIntervalId] = useState(null);
 
   useEffect(() => {
