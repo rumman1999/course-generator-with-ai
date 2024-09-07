@@ -26,18 +26,16 @@ const AllCourseList = () => {
   const [intervalId, setIntervalId] = useState(null);
 
   useEffect(() => {
-    if (user?.primaryEmailAddress?.emailAddress) {
-      getCourseList();
-    }
-  }, [user]);
+    getCourseList();
+  }, []);
 
   const getCourseList = async () => {
     const result = await db
       .select()
       .from(CourseList)
-      .where(
-        eq(CourseList?.createdBy, user?.primaryEmailAddress?.emailAddress)
-      );
+      // .where(
+      //   eq(CourseList?.createdBy, user?.primaryEmailAddress?.emailAddress)
+      // );
     setCourseList(result);
   };
 
@@ -95,7 +93,9 @@ const AllCourseList = () => {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
-        <Carousel
+        {
+          courseList.length > 0 && 
+          <Carousel
           slides={courseList.map((course, index) => ({
             key: index,
             content: <CoursesCard course={course} key={index} />
@@ -105,6 +105,7 @@ const AllCourseList = () => {
           showNavigation={true}
           animationConfig={config.slow}
         />
+        }
       </div>
     </div>
   );

@@ -3,9 +3,9 @@ import { db } from '@/config/db';
 import { useUser } from '@clerk/nextjs';
 import { and, eq } from 'drizzle-orm';
 import React, { useEffect, useState } from 'react';
-import ChapterListCard from './_components/ChapterListCard';
+import ChapterListCard from '../_components/ChapterListCard';
 import { Chapters, CourseList } from '@/config/schema';
-import ChapterContent from './_components/ChapterContent';
+import ChapterContent from '../_components/ChapterContent';
 
 const CoursePage = ({ params }) => {
   const { user } = useUser();

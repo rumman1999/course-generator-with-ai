@@ -50,9 +50,9 @@ const CoarseLayout = ({ params }) => {
           let videoid = "";
           const result =await GenearteCourseChapterContent_AI.sendMessage(PROMPT)
           const content = JSON.parse(result.response.text())
-          // const youtubeResults = await getYoutubeResult(course?.name + ":" + chapter?.name);
-          // videoid = youtubeResults[0]?.id?.videoId;
-          videoid = "mAtkPQO1FcA"
+          const youtubeResults = await getYoutubeResult(course?.name + ":" + chapter?.name);
+          videoid = youtubeResults[0]?.id?.videoId;
+          // videoid = "mAtkPQO1FcA"
 
           await db.insert(Chapters).values({
             chapterId: index,
@@ -64,7 +64,7 @@ const CoarseLayout = ({ params }) => {
             publish : true
           })
           setLoading(false);
-          router.replace("/" + course?.courseId + "/finish");
+          router.replace("/course/" + course?.courseId + "/start");
           console.log("videoid", videoid);
         } catch (error) {
           console.log(error);

@@ -1,12 +1,19 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const CoursesCard = ({course}) => {
+  const route = useRouter();
+
+  const handleRoute = (e) => {
+    console.log("first e")
+    route.replace(`/course/${course.courseId}/start`)
+    e.preventDefault()
+  }
+
   return (
-    <Link href={`/course/${course.courseId}`}>
-    <div className='shadow-sm rounded-lg border p-2 hover:scale-105 transition-all cursor-pointer mt-5'>
-      <Image src={course?.courseBanner} width={300} height={300} className='w-full h-[280px] object-cover'/>
+    <div onClick={(e)=>handleRoute(e)} className='shadow-sm rounded-lg border p-2 hover:scale-105 transition-all cursor-pointer'>
+      <Image src={course?.courseBanner} width={150} height={150} className='w-full h-[150px] object-cover'/>
       <div className='p-2'>
         <h2 className='font-medium text-lg'>
           {course?.courseOutput?.course?.name}
@@ -18,7 +25,6 @@ const CoursesCard = ({course}) => {
       </div>
 
     </div>
-    </Link>
   )
 }
 
