@@ -75,5 +75,6 @@ module.exports = {
 		  },
 		}, ['responsive', 'hover']);
 	  },
+	  require('tailwind-scrollbar'),
   ],
 };

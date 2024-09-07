@@ -1,8 +1,11 @@
 import React from 'react'
+import AllCourseList from './_courseList/AllCourseList'
 
 const Explore = () => {
   return (
-    <div>Explore</div>
+    <div>
+      <AllCourseList/>
+    </div>
   )
 }
 

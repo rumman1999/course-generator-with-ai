@@ -6,28 +6,28 @@ import { useUser } from '@clerk/nextjs';
 import { eq } from 'drizzle-orm';
 import React, { useEffect, useState } from 'react'
 import { HiAcademicCap } from 'react-icons/hi2';
+import coading from "../../../public/creative.jpg"
+import Image from 'next/image';
 
 const Course = ({params}) => {
-  console.log(params.courseId)
+  console.log("first")
 
     const { user } = useUser();
-  const [course, setCourse] = useState([]);
+  const [course, setCourse] = useState();
 
   useEffect(()=>{
-    params && GetCourse
+    GetCourse()
   },[params])
 
-    const GetCourse = async () => {
-        const result = await db
-          .select()
-          .from(CourseList)
-          console.log(result)
-        setCourse(result[0]);
-      };
-
-      console.log(course)
+  const GetCourse = async () => {
+    const result = await db
+      .select()
+      .from(CourseList)
+    console.log("result", result[0]);
+    setCourse(result[0]);
+  };
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black  w-full h-auto px-7 md:px-20 lg:px-44 text-gray-300 min-h-[100vh] p-10 border rounded-xl shadow-sm mt-5">
+    <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black  w-full h-auto px-7 md:px-20 lg:px-44 text-gray-300 min-h-[100vh] p-10 shadow-sm">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div>
         <h2 className="font-bold text-2xl">{course?.courseOutput?.course?.name}</h2>
@@ -37,12 +37,11 @@ const Course = ({params}) => {
       </div>
       <div>
           <label htmlFor="image-upload">
-          {/* <Image src={''} width={300} height={300} className="w-full rounded-xl h-[250px] object-cover" alt="banner"/> */}
+          <Image src={course?.courseBanner || coading} width={300} height={300} className="w-full rounded-xl h-[250px] object-cover" alt="banner"/>
           </label>
       </div>
     </div>
   </div>
   )
 }
-
 export default Course

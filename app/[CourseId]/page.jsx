@@ -20,7 +20,7 @@ const CoarseLayout = ({ params }) => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(params)
+    // console.log(params)
     if (user?.primaryEmailAddress?.emailAddress) {
       params && GetCourse();
     }
@@ -50,8 +50,9 @@ const CoarseLayout = ({ params }) => {
           let videoid = "";
           const result =await GenearteCourseChapterContent_AI.sendMessage(PROMPT)
           const content = JSON.parse(result.response.text())
-          const youtubeResults = await getYoutubeResult(course?.name + ":" + chapter?.name);
-          videoid = youtubeResults[0]?.id?.videoId;
+          // const youtubeResults = await getYoutubeResult(course?.name + ":" + chapter?.name);
+          // videoid = youtubeResults[0]?.id?.videoId;
+          videoid = "mAtkPQO1FcA"
 
           await db.insert(Chapters).values({
             chapterId: index,

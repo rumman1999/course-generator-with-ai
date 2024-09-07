@@ -25,12 +25,12 @@ const SideBar = () => {
       icon: <HiMiniRocketLaunch aria-hidden="true" />,
       path: "/dashboard/explore",
     },
-    {
-      id: 3,
-      name: "Upgrade",
-      icon: <HiOutlineArrowUpTray aria-hidden="true" />,
-      path: "/dashboard/upgrade",
-    },
+    // {
+    //   id: 3,
+    //   name: "Upgrade",
+    //   icon: <HiOutlineArrowUpTray aria-hidden="true" />,
+    //   path: "/dashboard/upgrade",
+    // },
     {
       id: 4,
       name: "LogOut",
@@ -67,13 +67,13 @@ const SideBar = () => {
         ))}
       </ul>
 
-      <div className="absolute bottom-10 w-[80%]">
+      {/* <div className="absolute bottom-10 w-[80%]">
         <Progress value={33} />
         <h2 className="text-sm my-2">3 out of 5 courses created</h2>
         <h2 className="text-xs text-gray-400">
           Upgrade your plan for unlimited courses
         </h2>
-      </div>
+      </div> */}
     </div>
   );
 };
