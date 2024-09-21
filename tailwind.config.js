@@ -63,6 +63,18 @@ module.exports = {
 		  },
 		  minHeight: {
 			'auto': 'auto', // Ensure auto is available
+		  }, keyframes: {
+			glowing: {
+			  '0%': { backgroundPosition: '0 0' },
+			  '50%': { backgroundPosition: '400% 0' },
+			  '100%': { backgroundPosition: '0 0' },
+			},
+		  },
+		  animation: {
+			glowing: 'glowing 20s linear infinite',
+		  },
+		  backgroundSize: {
+			'400%': '400%',
 		  },
   	}
   },

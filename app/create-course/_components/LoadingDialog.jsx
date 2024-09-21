@@ -8,7 +8,7 @@ import {
 import Image from 'next/image'
   
 
-const LoadingDialog = (loading) => {
+const LoadingDialog = ({loading}) => {
   return (
     <AlertDialog open={loading}>
   <AlertDialogContent>

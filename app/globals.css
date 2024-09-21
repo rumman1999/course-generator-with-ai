@@ -74,15 +74,15 @@
 }
 /* Custom scrollbar styles */
 .scrollbar-custom::-webkit-scrollbar {
-  width: 12px;
+  width: 4px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Light gray background */
+  background: #171717; /* Light gray background */
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #171717; /* Tailwind's blue color */
-  border-radius: 6px;
-  border: 3px solid #f0f0f0;
+  background-color: #606060; /* Tailwind's blue color */
+  /* border-radius: 6px; */
+  /* border: 3px solid #f0f0f0; */
 }

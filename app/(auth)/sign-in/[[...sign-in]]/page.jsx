@@ -60,13 +60,16 @@ export default function Page() {
               </svg>
             </a>
   
-            <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Welcome to Squid 🦑
-            </h1>
-  
             
           </div>
+          <div className="text-gray-50 w-full border border-gray-300 p-2 rounded-md bg-gray-800">
+  <p className="mb-1 text-xs">SignIn with this mail and password</p>
+  <h1 className="text-sm font-semibold">test mail : a+clerk_test@example.com</h1>
+  <h3 className="text-sm font-medium">test password: testmode@123</h3>
+</div>
+
             <SignIn className='bg-gradient-to-b from-gray-900 via-gray-800 to-black  '/>
+            
         </div>
       </main>
     </div>

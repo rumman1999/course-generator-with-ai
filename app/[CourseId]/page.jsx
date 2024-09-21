@@ -12,6 +12,7 @@ import { GenearteCourseChapterContent_AI } from "@/config/AiModel";
 // import LoadingDialog from "../_components/LoadingDialog";
 import { getYoutubeResult } from "@/config/search";
 import { useRouter } from "next/navigation";
+import LoadingDialog from "../create-course/_components/LoadingDialog";
 
 const CoarseLayout = ({ params }) => {
   const { user } = useUser();
@@ -41,7 +42,7 @@ const CoarseLayout = ({ params }) => {
   };
 
   const GenerateCourseChaptersContent = () => {
-    // setLoading(true)
+    setLoading(true)
     const chapetrs = course?.courseOutput?.course?.chapters;
     chapetrs.forEach(
       async (chapter, index) => {
@@ -76,8 +77,10 @@ const CoarseLayout = ({ params }) => {
 
   return (
     <div className='bg-gradient-to-b from-gray-900 via-gray-800 to-black  w-full h-auto px-7 md:px-20 lg:px-44 text-gray-300 min-h-[100vh]'>
-      <h2 className="font-bold text-center text-2xl pt-10">Coarse Layout</h2>
-      {/* <LoadingDialog loading={loading}/> */}
+      <h2 className="font-bold text-center text-2xl pt-10">Coarse Layout , Change the content and Image else this will be you r default </h2>
+      {
+        loading && <LoadingDialog loading={loading}/>
+      }
 
       {/* Basic Info */}
       <CourseBasicInfo course={course} refreshData={() => GetCourse()} />

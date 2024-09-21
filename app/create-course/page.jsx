@@ -12,6 +12,7 @@ import { CourseList } from "@/config/schema";
 import uuid4 from "uuid4";
 import {useUser} from "@clerk/nextjs"
 import { useRouter } from "next/navigation";
+import LoadingDialog from "./_components/LoadingDialog";
 // import LoadingDialog from "./_components/LoadingDialog";
 
 const CreateCourse = () => {
@@ -117,6 +118,10 @@ const CreateCourse = () => {
 
   return (
     <div className="w-[800px] m-auto">
+      {
+        loading &&
+        <LoadingDialog loading={loading}/>
+      }
       <div>
         <div className="flex flex-col justify-center items-center mt-10">
           <h2 className="text-4xl font-medium text-gray-200">Create Course</h2>
@@ -174,9 +179,6 @@ const CreateCourse = () => {
           )}
         </div>
       </div>
-      {/* {
-        loading && <LoadingDialog loading={loading} />
-      } */}
     </div>
   );
 };

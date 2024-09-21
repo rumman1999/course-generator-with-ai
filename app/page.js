@@ -34,7 +34,7 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-screen-xl px-4 py-32 flex h-full items-center justify-center">
+      <div className="relative z-10 mx-auto max-w-screen-xl px-4 py-32 flex items-center justify-center">
         <div className="mx-auto max-w-xl text-center text-white">
           <h1 className="text-4xl font-extrabold sm:text-5xl">
             Create Courses using AI
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <div className="fixed bottom-0 left-0 right-0 w-full  flex justify-between px-5 shadow-md h-[100px] items-center">
+    <div className="fixed bottom-0 left-0 right-0 w-full  flex justify-between px-5 shadow-md h-[100px] items-center z-1">
       <Image src={'/logo1.png'} width={150} height={100} alt="Logo" />
       <div className="h-1/2">
         <a
